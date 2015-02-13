@@ -1,0 +1,35 @@
+---
+layout: default
+title: 
+excerpt: 
+---
+<div class="news">
+	{% for post in site.categories.news %}{% if forloop.first %}
+	
+	<div class="news_header">
+		{% if post.img %}<div class="news_header_content_with_img">
+		{% else %}<div class="news_header_content_with_img">{% endif %}
+			<div class="post_title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
+			<div class="post_meta"></div>
+			<div class="post_content">{{ post.content }}</div>
+		</div>
+		
+		{% if post.img %}<div class="news_header_img"><a href="{{ post.img }}" data-lightbox="{{ post.imgname }}"><img src="{{ post.img }}" /></a></div>{% endif %}
+		<div class="clearFloat"></div>	
+		
+	</div>
+	
+	
+	{% else %}
+	<div class="archive_postlist">
+		<h1>过往活动</h1>
+		<ul>			
+			<li>
+				&loz; <span class="archive_date">{{ post.date | date: "%Y-%m-%d" }}</span> 
+				&raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+			</li>
+		</ul>
+	</div>
+	{% endif %}{% endfor %}	
+	
+</div>
