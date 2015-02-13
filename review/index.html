@@ -1,0 +1,67 @@
+---
+layout: default
+title: 
+excerpt: 
+---
+<!-- 平滑跳转js -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".gotoTop").click(function(){
+			$("html,body").animate({scrollTop: $("html").offset().top - 72 }, 400);
+		});
+	});
+</script>
+<!-- end js -->
+
+<div class="review">
+
+	<div class="review_header">
+		<blockquote>
+			<p>“敬畏耶和华是智慧的开端。”——箴言9:10</p>
+			<p></p>
+			<p></p>
+			<p></p>		
+		</blockquote>
+	
+	</div>
+
+	<div class="archive_taglist">
+		<ul>
+			{% assign tagid = 1 %}
+			{% for tag in site.tags %}{% for post in tag[1] %}{% if post.category == 'review' %}{% if forloop.first %}	
+			<!-- 平滑跳转js -->
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$("#tag{{tagid}}").click(function(){
+					$("html,body").animate({scrollTop: $("#{{tag[0]}}").offset().top - 115 }, 400);
+				});
+			});
+			</script>
+			<!-- end js -->
+			<li><img src="{{ site.baseurl }}/assets/img/icon_tag.png" /><button id="tag{{tagid}}" type="button">{{ tag[0]}}</button></li>
+			{% assign tagid = tagid|plus:1 %}
+			{% endif %}{% endif %}{% endfor %}{% endfor %}
+		</ul>
+	</div>
+	
+	<div class="archive_postlist">
+		<ul>
+			{% for tag in site.tags %}{% for post in tag[1] %}{% if post.category == 'review' %}{% if forloop.first %}
+			<h1 id="{{tag[0]}}">{{ tag[0]}}<span class="tag_size">({{tag[1].size}})</span></h1>
+			<button class="gotoTop" type="button">TOP<span class="clearFloat"></span></button>
+			<li>
+				<span class="post_date">{{ post.date | date: "%Y-%m-%d" }}</span> 
+				&raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+				{% if post.author %}&raquo; <span class="post_author">投稿：{{ post.author }}</span>{% endif %}
+				{% if post.bookname %}<span class="post_bookname">《{{ post.bookname }}》</span>{% endif %}
+				<span class="clearFloat"></span>
+			</li>
+			{% else %}
+			<li>
+				<span class="archive_date">{{ post.date | date: "%Y-%m-%d" }}</span> 
+				&raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+			</li>
+			{% endif %}{% endif %}{% endfor %}{% endfor %}
+		</ul>
+	</div>
+</div>
