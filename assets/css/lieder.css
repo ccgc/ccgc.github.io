@@ -1,0 +1,36 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+body {
+	background:url(bodyBg.jpg) repeat fixed;
+	margin: 1em auto 2em;
+	background-color: #FFF;
+	font: 14px \5FAE\8F6F\96C5\9ED1, \534E\6587\9ED1\4F53, Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+
+a {
+	text-decoration:none;
+	margin:0px 0.5em;
+}
+a:link {
+	color:#f22;
+}
+a:hover {
+	color:#000;
+	text-decoration:underline;
+}
+a:active {
+	color:#00f;
+}
+a:visited {
+	color: #000;
+}
+h1 {
+	font-size:140%;
+}
+table, td, th, tr{
+	border: 1px solid black;
+	padding: .2em, .5em;
+}
