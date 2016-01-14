@@ -18,13 +18,17 @@
 					<th>专辑</th>
 				</tr>
 				<tr>
-					<td colspan="4">所有诗歌按照拼音顺序排列，按需下载，请善用搜索。</td>
-				</tr>			
+					<td colspan="4">所有诗歌按照拼音顺序排列，按需下载，请善用搜索</td>
+				</tr>
+				<tr>
+					<td><b>所有PPT下载</b></td>
+					<td><a href="https://www.dropbox.com/sh/jg9j93c8pxaksmb/AAAKJU4fjPvXBbYEXF0gNW0ua?dl=0" target="_blank">链接</a></td>
+					<td colspan="2">点击右上角“Download”打包下载或转存</td>
+				</tr>
 				<tr>
 					<td><b>PPT模板</b></td>
 					<td><a href="https://dl.dropboxusercontent.com/u/8843931/CCGC%E6%95%AC%E6%8B%9C%E6%A8%A1%E6%9D%BF%5B201511%5D.pptx">下载</a></td>
-					<td>-</td>
-					<td>-</td>
+					<td colspan="2">2015年11月更新</td>
 				</tr>
 				<xsl:for-each select="root/info">
 				<tr>
