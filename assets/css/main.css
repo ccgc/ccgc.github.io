@@ -120,7 +120,9 @@ button {
 /* footer */
 .footer {
 	min-height:100px;
-	text-align:left;
+	text-align:center;
+	border-top:2px solid #ddd;
+	padding:20px 0;
 }
 /* sidebar */
 .sidebar {
@@ -230,14 +232,14 @@ button {
 	text-decoration:underline;
 }
 .post_content h1 {
-	font-size:150%;
-	margin:2em 0 1em 0;
+	font-size:125%;
+	margin:1.5em 0 1em 0;
 	padding-bottom:8px;
 	border-bottom: 1px solid #999;
 	text-shadow:#f3f3f3 1px 1px 0px;
 }
 .post_content h2 {
-	font-size:120%;
+	font-size:110%;
 	margin-top:1.5em;
 	text-shadow:#f3f3f3 1px 1px 0px;
 }
@@ -250,6 +252,7 @@ button {
 .post_content {
 	text-align:justify;
 	text-justify:inter-ideograph;
+	margin-bottom:40px;
 }
 .post_content a {
 	text-decoration:none;
