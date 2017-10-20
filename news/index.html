@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 
+title: 近期活动
 excerpt: 
 ---
 <div class="news">
@@ -8,7 +8,7 @@ excerpt:
 	
 	<div class="news_header">
 		{% if post.img %}<div class="news_header_content_with_img">
-		{% else %}<div class="news_header_content_with_img">{% endif %}
+		{% else %}<div class="news_header_content_without_img">{% endif %}
 			<div class="post_title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
 			<div class="post_meta"></div>
 			<div class="post_content">{{ post.content }}</div>

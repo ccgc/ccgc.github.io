@@ -5,4 +5,35 @@ excerpt: 克劳斯塔尔华人基督徒查经班欢迎您！
 ---
 <div class="index">
 
+	<div class="index_recent_firstpost">
+		{% for post in site.posts limit:3 %}
+		
+		
+		<div class="post_title">
+			<a href="{{site.baseurl}}/{{post.url}}">{{ post.title }}</a>
+		</div>
+		<div class="post_meta">
+			<span>		
+				{{ post.date | date: "%Y年%m月%d日 " }}
+				{% if post.author %}&gt;&gt; 投稿：{{ page.author }}{% endif %}
+				&gt;&gt; 分类：<a href="{{site.baseurl}}/{{page.categories}}" class="">{{ post.category | replace:'review','读后感' | replace:'news','近期活动' }}</a>
+				{% for tag in post.tags%}
+				<img src="{{site.baseurl}}/assets/img/icon_tag.png" />
+				<a href="{{site.baseurl}}/{{page.category | downcase}}#{{tag}}">{{tag}}</a>
+				{% endfor %}
+			</span>
+		</div>
+		<div class="post_content"> {{ post.content }} </div>
+	
+	
+	
+		{% endfor %}
+	</div>
+
+
+
+
+
+
+
 </div><!-- end index -->

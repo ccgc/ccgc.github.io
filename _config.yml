@@ -1,14 +1,11 @@
 baseurl:
-timezone:
-permalink: /:categories/:year-:month-:day/:title
-paginate: 9
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough", "underline", "space_after_headers", "superscript"]
-highlighter: true
-syntax: false
+timezone: Europe/Berlin
+permalink: /:categories/:year/:month-/:day/:title.html
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
+highlighter: rouge
 excerpt_separator:
-
-
 
 exclude: ["old", "psd", "caogao", "*.txt", "*.bat", "*.zip", "*.rar"]
