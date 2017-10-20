@@ -198,12 +198,12 @@ button {
 .main {
 	max-width: 840px;
 	clear: both;
-	padding-left: 15px;
+	padding: 0 15px;
 	margin: 0 auto;
 	text-align: left; 
 }
 .content {
-	padding: 20px 15px 0 0;
+	padding-top: 20px;
 	min-height: 700px;
 }
 .meta {
