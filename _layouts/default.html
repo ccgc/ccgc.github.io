@@ -22,63 +22,43 @@
 </head>
 
 <body>
-<div class="site" id="top"> 
+<div class="site"> 
 
-	<!-- 返回顶部
-	<div>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$(".backToTop").click(function(){
-					$("html,body").animate({scrollTop: $("#top").offset().top}, 400);
-				});
-			});
-		</script>
-		<button class="backToTop" type="button"></button>
-	</div> -->
-	
 	<!-- 主页面 -->
+	<div class="header">
+		<div class="header_content">
+			<div class="title">
+				<!-- 标题/logo -->
+				<div class="name">
+					<b>克劳斯塔尔华人基督徒查经班</b><br /><span>Chinesische Christliche Gruppe Clausthal</span>
+				</div>
+				<!-- 导航菜单 -->
+				<div class="navbar">
+					<a href="{{ site.baseurl }}/">[首页]</a>
+					<a href="{{ site.baseurl }}/news">[近期活动]</a>
+					<a href="{{ site.baseurl }}/review">[阅读社区]</a>
+					<a href="{{ site.baseurl }}/about.html">[查经班简介]</a>
+					<a href="{{ site.baseurl }}/contact.html">[联系]</a>
+					<a href=""></a>
+				</div>
+				<div clas="clearFloat"></div>
+			</div>
+			
+			<div class="info">{% include info.html %}</div>	
+			
+			<div clas="clearFloat"></div>
+		</div>
+	</div><!-- end header -->
+	
 	<div class="main">
-		<!-- 标题或logo -->
-		<div class="title">
-			克劳斯塔尔华人基督徒查经班<br /><span>Chinesische Christliche Gruppe Clausthal</span>
-		</div>
-		<!-- 导航菜单 -->
-		<div class="navbar">
-			<a href="{{ site.baseurl }}/">[首页]</a>
-			<a href="{{ site.baseurl }}/news">[近期活动]</a>
-			<a href="{{ site.baseurl }}/review">[阅读社区]</a>
-			<a href="{{ site.baseurl }}/about">[查经班简介]</a>
-			<a href="{{ site.baseurl }}/contact">[联系方式]</a>
-			<a href=""></a>
-		</div>
 		<!-- 正文 -->
 		<div class="content">{{ content }}</div>
-		<div class="footer">
-			<p>© 2005-2017 Chinesische Christliche Gruppe Clausthal</p>
-			
-		</div>
+		<!-- 侧边信息栏 -->
 	</div><!-- end main -->
 	
-	<!-- 侧边信息栏 -->
-	<div class="sidebar">
-		<div class="sidebar_component">{% include info.html %}</div>
-		<div class="sidebar_component">
-			<h1>近期活动</h1>
-			<ul>{% for post in site.categories.news limit:3 %}
-				<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-			{% endfor %}</ul>
-		</div>
-		<div class="sidebar_component">
-			<h1>阅读社区</h1>
-			<ul>{% for post in site.categories.review limit:5 %}
-				<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>{% if post.author %}<span>&raquo; {{ post.author }}</span>{% endif %}</li>
-			{% endfor %}</ul>
-		</div>
-		<div class=""></div>
-	</div>
-	
-	<!-- 清除浮动 -->
-	<div class="clearFloat"></div>
+	<div class="footer">
+		<p>© 2005-2017<br />Chinesische Christliche Gruppe Clausthal</p>
+	</div><!-- end footer -->
 	
 </div>
 </body>
