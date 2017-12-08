@@ -18,7 +18,7 @@ img: https://i.imgur.com/NhWwnRn.jpg
 - 地点：[Seilerstr. 5, Clausthal]({{site.baseurl}}/contact.html#地址)
 Evangelisch-Methodistische Kirch
 - 主题：道成肉身
-- 内容：美味晚餐、精彩短剧、好玩游戏、优美诗歌、传道短讲，还预备了礼物！
+- 内容：美味晚餐、精彩短剧、好玩游戏、优美诗歌、传道短讲、精美礼物
 - 备注：所有费用全免
 
 # 联系方式：
