@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 2017年迎新聚会
-date: 2017-10-20 +0100
 category: news
 img: https://i.imgur.com/R2F4z6g.jpg
+datum: 2017-10-20
 ---
 大家好！
 

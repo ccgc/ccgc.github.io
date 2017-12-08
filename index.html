@@ -9,7 +9,7 @@ excerpt: 克劳斯塔尔华人基督徒查经班欢迎您！
 		{% for post in site.posts limit:1 %}
 		<div class="post_title">
 			<a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
-			<span class="post_meta">&gt;&gt; 日期：{{ post.date | date: "%Y年%m月%d日" }}</span>
+			<span class="post_meta">&gt;&gt; 日期：{{ post.datum | date: "%Y年%m月%d日" }}</span>
 		</div>
 		<div class="post_content"> {{ post.content }} </div>
 		{% endfor %}

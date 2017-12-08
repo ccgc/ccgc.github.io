@@ -13,7 +13,7 @@ excerpt:
 		{% else %}<div class="news_header_content_without_img">{% endif %}
 			<div class="post_title">
 				<a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
-				<span class="post_meta">&gt;&gt; 日期：{{ post.date | date: "%Y年%m月%d日" }}</span>
+				<span class="post_meta">&gt;&gt; 日期：{{ post.datum | date: "%Y年%m月%d日" }}</span>
 			</div>
 			<div class="post_content">{{ post.content |  strip_html | strip_newlines | truncate:300 }}</div>
 		</div>
@@ -30,7 +30,7 @@ excerpt:
 	{% else %}
 	
 			<li>
-				&loz; <span>{{ post.date | date: "%Y-%m-%d" }}</span> 
+				&loz; <span>{{ post.datum | date: "%Y-%m-%d" }}</span> 
 				&raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 			</li>
 
