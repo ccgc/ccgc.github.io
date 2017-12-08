@@ -7,29 +7,38 @@ excerpt:
 	{% for post in site.categories.news %}{% if forloop.first %}
 	
 	<div class="news_header">
+		{% if post.img %}<div class="news_header_img"><a href="{{ post.img }}" data-lightbox="{{ post.img }}"><img src="{{ post.img }}" /></a></div>{% endif %}
+	
 		{% if post.img %}<div class="news_header_content_with_img">
 		{% else %}<div class="news_header_content_without_img">{% endif %}
-			<div class="post_title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></div>
-			<div class="post_meta"></div>
-			<div class="post_content">{{ post.content }}</div>
+			<div class="post_title">
+				<a href="{{site.baseurl}}{{post.url}}">{{ post.title }}</a>
+				<span class="post_meta">&gt;&gt; 日期：{{ post.date | date: "%Y年%m月%d日" }}</span>
+			</div>
+			<div class="post_content">{{ post.content |  strip_html | strip_newlines | truncate:300 }}</div>
 		</div>
 		
-		{% if post.img %}<div class="news_header_img"><a href="{{ post.img }}" data-lightbox="{{ post.imgname }}"><img src="{{ post.img }}" /></a></div>{% endif %}
+		
 		<div class="clearFloat"></div>	
 		
 	</div>
 	
-	
-	{% else %}
 	<div class="archive_postlist">
 		<h1>过往活动</h1>
 		<ul>			
+	
+	{% else %}
+	
 			<li>
-				&loz; <span class="archive_date">{{ post.date | date: "%Y-%m-%d" }}</span> 
+				&loz; <span>{{ post.date | date: "%Y-%m-%d" }}</span> 
 				&raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 			</li>
-		</ul>
-	</div>
+
 	{% endif %}{% endfor %}	
+	
+			</ul>
+	</div>
+	
+	<div class="clearFloat"></div>	
 	
 </div>

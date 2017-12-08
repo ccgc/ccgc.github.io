@@ -131,54 +131,59 @@ button {
 /*
 /*****************************************************************************/
 .header {
-	padding: 25px 15px 10px 15px;
-	border-bottom: 2px solid #eee;
+	padding: 25px 15px 30px 15px;
+	border-bottom: 8px solid #222;
 	text-align: left;
-	background-color: #fff;
+	background-color: #cdf; 
+}
+.name {
+	background-image: url(../img/ccgc_logo.png);
+	background-repeat: no-repeat;
+	height: auto;
+	padding: 48px 0 15px 60px;
+	font-weight: bold;
+}
+.name_cn {
+	color: #0c65aa;
+	letter-spacing: 2px;
+}
+.name_b {
+	font-size: 130%;
+}
+.name_de {
+	color: #b44c1a;
+}
+.navbar {
+	text-align: left;
+	padding-left: 60px;
+}
+.navbar a {
+	margin-right: 5px;
 }
 @media screen and (min-width: 700px) {
 	.header_content {
 		max-width: 840px;
 		margin: 0 auto 10px auto;
-		height: 75px;
+		height: 110px;
 	}
 	.title {
-		max-width: 50%;
-		height: 75px;
+		max-width: 55%;
 		float: left;
 	}
 	.info {
-		max-width: 50%;
+		max-width: 45%;
 		float: right;
 		text-align: right;
-		padding-top: 4px;
+		padding-top: 56px;
 	}
 }
 @media screen and (max-width: 700px) {
 	.header_content {
 		max-width: 840px;
-		margin: 0 auto 10px auto;
+		margin: 0 auto;
 	}
-	.title {
+}
 
-	}
-	.info {
-		margin-top: 20px;
-	}
-}
-.name {
-	min-height: 60px;
-	font-size: 1.7em;
-}
-.name span {
-	font-size:0.7em;
-}
-.navbar {
-	text-align: left;
-}
-.navbar a {
-	margin-right: 5px;
-}
 
 /*****************************************************************************/
 /*
@@ -206,9 +211,6 @@ button {
 	padding-top: 20px;
 	min-height: 700px;
 }
-.meta {
-	color: #aaa;
-}
 
 /*****************************************************************************/
 /*
@@ -231,15 +233,6 @@ button {
 	padding: 20px 0;
 }
 
-
-
-
-
-
-
-
-
-
 /*****************************************************************************/
 /*
 /* index
@@ -255,6 +248,7 @@ button {
 .post_title {
 	color: #609;
 	font-size: 20px;
+	padding-bottom: 8px;
 }
 .post_title a {
 	color: #609;
@@ -263,31 +257,9 @@ button {
 .post_title a:hover {
 	text-decoration: underline;
 }
-.post_meta {
-	padding-top: 10px;
-}
-.post_meta a {
-	text-decoration: none;
-	color: #036;
-}
-.post_meta a:hover {
-	text-decoration: underline;
-}
-.post_meta span {
-	color: #036;
-	font-size: 12px;
-}
-.post_meta img {
-	width: 11px;
-	padding: 0px 0px 0px 3px;
-}
-.post_meta button {
-	color: #363;
-	font-size: 12px;
-	padding-left: 2px;
-}
-.post_meta button:hover {
-	text-decoration: underline;
+.post_title span {
+	font-size: 14px;
+	color: #555;
 }
 .post_content h1 {
 	font-size: 125%;
@@ -325,13 +297,22 @@ button {
 	margin-left: 2em;
 }
 .post_content img {
-	max-width: 95%;
 	border: #777 1px solid;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	padding: 0;
 	box-shadow: #555 3px 2px 5px;
-	margin: 0 0 .8em 0;
+	margin: 1em 0 .6em 0;
+}
+@media screen and (min-width: 700px) {
+	.post_content img {
+		max-width: 500px;
+	}
+}
+@media screen and (max-width: 700px) {
+	.post_content img {
+		max-width: 90%;
+	}
 }
 .post_content td {
 	padding-right: 1.5em;
@@ -366,37 +347,10 @@ button {
 /*
 /*****************************************************************************/
 
-.archive_taglist {
-	clear: both;
-	padding-top: 0.5em;
-	padding-right: 20px;
-}
-.archive_taglist li {
-	display: inline-block;
-	list-style: none;
-	margin-right: 1em;
-}
-.archive_taglist img {
-	width: 11px;
-	margin-right: 4px;
-}
-.archive_taglist a {
-	color: #000;
-	text-decoration: none;
-}
-.archive_taglist a:hover {
-	text-decoration: underline;
-}
-.archive_taglist button {
-	font-size: 14px;
-}
-.archive_taglist button:hover {
-	text-shadow: 0px 1px 1px #aaa;
-}
 .archive_postlist {
-	width: 98%;
-	float: left;
-	margin-top: 5px;
+	margin: 0px 0 20px 0;
+	padding-top: 10px;
+	border-top: 2px solid #ddd;
 }
 .archive_postlist a {
 	color: #F63;
@@ -414,14 +368,6 @@ button {
 .archive_postlist span {
 	color: #000;
 	font-size: 85%;
-}
-.archive_postlist h1 {
-	height: 1.8em;
-	margin: 1.5em 0 0.8em 0;
-	font-size: 100%;
-	font-style: normal;
-	font-weight: normal;
-	border-bottom: 1px solid #ccc;
 }
 .archive_postlist .post_date {
 	font-family: Monaco, "Courier New", monospace;
@@ -444,20 +390,36 @@ button {
 /*
 /*****************************************************************************/
 
-
 .news_header {
 	width: auto;
 }
-.news_header_content_with_img {
-	width: 58%;
-	float: left;
+@media screen and (min-width: 700px) {
+	.news_header_img img {
+		float: left;
+		width: 55%;
+		margin-right: 30px;
+		margin-bottom: 30px;
+		border: 1px solid #999;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+	}
+	.news_header_content_with_img {
+		width: 40%;
+		float: left;
+	}
 }
-.news_header_img img {
-	float: right;
-	width: 40%;
-	border: 1px solid #999;
-	border-radius: 5px;
-	-moz-border-radius: 5px;
+@media screen and (max-width: 700px) {
+	.news_header_content_with_img {
+		width: 100%;
+	}
+	.news_header_img img {
+		width: 100%;
+		border: 1px solid #999;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		margin-bottom: 12px;
+	}
+}
 }
 .news_header_content_without_img {
 	width: 100%;

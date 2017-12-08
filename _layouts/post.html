@@ -1,17 +1,8 @@
 ---
 layout: default
 ---
-<div class="post_title">{{ page.title }}</div>
-<div class="post_meta">
-	<span>		
-		{{ page.date | date: "%Y年%m月%d日 " }}
-		{% if page.author %}&gt;&gt; 投稿：{{ page.author }}{% endif %}
-		&gt;&gt; 分类：<a href="{{site.baseurl}}/{{page.categories}}" class="">{{ page.category | replace:'review','读后感' | replace:'news','近期活动' }}</a>
-		{% for tag in page.tags%}
-		<img src="{{site.baseurl}}/assets/img/icon_tag.png" />
-		<a href="{{site.baseurl}}/{{page.category | downcase}}#{{tag}}">{{tag}}</a>
-		{% endfor %}
-	</span>
+<div class="post_title">{{ page.title }}
+	{% if page.date %}<span>&gt;&gt; 日期：{{ page.date | date: "%Y年%m月%d日 " }}</span>{% endif %}
 </div>
 <div class="post_content"> {{ content }} </div>
 <div class="post_links">
