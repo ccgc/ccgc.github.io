@@ -2,6 +2,7 @@
 layout: post
 title: 2017圣诞茶话会
 category: news
+excerpt: 克劳斯塔尔华人基督徒查经班2017年12月15日圣诞茶话会；基督教教会圣诞节聚会
 img: https://i.imgur.com/NhWwnRn.jpg
 datum: 2017-12-15
 ---

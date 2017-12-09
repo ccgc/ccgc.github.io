@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 查经班介绍
-excerpt: 
+excerpt: 克劳斯塔尔华人基督徒查经班; Chinesische Christliche Gruppe Clausthal (CCGC); Bibelkreis in Clausthal-Zellerfeld; 基督教教会; 简介; 介绍; 历史
 ---
 # 查经班历史
 
