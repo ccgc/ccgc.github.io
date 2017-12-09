@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 查经班联系方式
-excerpt: 
+excerpt: 克劳斯塔尔华人基督徒查经班; Chinesische Christliche Gruppe Clausthal (CCGC); Bibelkreis in Clausthal-Zellerfeld; 基督教教会; 联系方式; 电话邮箱; 地址
 ---
 # 联系方式
 
